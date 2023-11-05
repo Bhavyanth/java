@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <servlet>
+        <servlet-name>AddNumberServlet</servlet-name>
+        <servlet-class>com.phoenix.javajsp.annotations.AddNumberServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddNumberServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-class>com.phoenix.javajsp.servletcontext.NewServlet</servlet-class>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>Sumatran Tiger</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NewServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SquareServlet</servlet-name>
+        <servlet-class>com.phoenix.javajsp.annotations.SquareServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SquareServlet</servlet-name>
+        <url-pattern>/square</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>name</param-name>
+        <param-value>Tiger</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>breed</param-name>
+        <param-value>Royal Bengal Tiger</param-value>
+    </context-param>
+
+</web-app>
