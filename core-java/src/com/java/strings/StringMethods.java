@@ -5,7 +5,7 @@ import com.sun.jmx.snmp.SnmpUnknownSubSystemException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class BasicString {
+public class StringMethods {
 	public static void main(String[] args) {
 		// Char array sequence
 		char[] ch={'P','r','a','s','a'};
@@ -49,10 +49,6 @@ public class BasicString {
 		String s3 = "Sai Prasanna       ";
 		System.out.println(s3);
 		System.out.println("Trimmed "+  s3.trim());
-
-		Pattern pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\\\S+$).{8, 20}$");
-		Matcher m = pattern.matcher("pras");
-		System.out.println(m.matches());
 
 
 	}
